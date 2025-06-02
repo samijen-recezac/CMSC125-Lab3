@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pathfinding Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="controls">
+    <button id="start">Find Path</button>
+    <label>Speed:
+      <select id="speed">
+        <option value="fast">Fast</option>
+        <option value="medium" selected>Medium</option>
+        <option value="slow">Slow</option>
+      </select>
+    </label>
+    <button id="save">Save Grid</button>
+    <button id="load">Load Grid</button>
+    <input type="number" id="grid-size" min="5" max="50" value="10" />
+  </div>
+  <div id="grid-container"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

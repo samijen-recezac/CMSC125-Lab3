@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#grid-container {
+  display: grid;
+  margin: 20px auto;
+  width: fit-content;
+  border: 2px solid #000;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+}
+
+.cell.wall { background-color: black; }
+.cell.start { background-color: green; }
+.cell.end { background-color: red; }
+.cell.visited { background-color: lightblue; }
+.cell.path { background-color: yellow; }
+.cell.weighted { background-color: orange; }
