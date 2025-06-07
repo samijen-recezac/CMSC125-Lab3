@@ -1,26 +1,79 @@
 body {
-  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
   text-align: center;
+  margin: 5vh;
+  padding: 0;
+  background: #f2f2f2;
+  flex-direction: column;
+}
+
+h1 {
   margin: 0;
   padding: 0;
+  line-height: 1.2;
 }
+
+.title-line {
+  display: block;
+}
+
+.controls-row {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.controls {
+  margin: 20px;
+  overflow: visible;
+  position: relative;
+  z-index: 10;
+}
+
+.controls button {
+  background-color: #4c8baf; 
+  color: white;             
+  border: none;             
+  padding: 8px;   
+  border-radius: 3px;
+  cursor: pointer;         
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: #43738e;
+}
+
+.controls select,
+.controls input[type="number"] {
+  padding: 6px 8px;
+  font-size: 14px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
 
 #grid-container {
   display: grid;
-  margin: 20px auto;
-  width: fit-content;
-  border: 2px solid #000;
+  margin: 0 auto;
+  gap: 1px;
 }
 
 .cell {
   width: 30px;
   height: 30px;
+  background-color: white;
   border: 1px solid #ccc;
 }
 
-.cell.wall { background-color: black; }
-.cell.start { background-color: green; }
-.cell.end { background-color: red; }
-.cell.visited { background-color: lightblue; }
-.cell.path { background-color: yellow; }
-.cell.weighted { background-color: orange; }
+.wall { background-color: grey; }
+.start { background-color: green; }
+.end { background-color: red; }
+.weight { background-color: orange; }
+.visited { background-color: palegreen; }
+.path { background-color: yellow; }
